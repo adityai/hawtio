@@ -14,6 +14,9 @@ dependencies:
     - npm install -g gulp
   override:
     - mvn install
+    - cp target/*.jar $CIRCLE_ARTIFACTS/
+    - cp target/*.war $CIRCLE_ARTIFACTS/
+    - cp target/classes/features.xml $CIRCLE_ARTIFACTS/
 
 test:
   override:
